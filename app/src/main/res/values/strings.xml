@@ -2,5 +2,7 @@
     <string name="app_name">dodo-ilmhona-proSkills</string>
     <dimen name="viewpager_next_item_visible">70dp</dimen>
     <dimen name="viewpager_current_item_horizontal_margin">80dp</dimen>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,14 +1,17 @@
-package com.example.order.view
+package islom.din.dodo_ilmhona_proskills.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.order.GetPizzaList
+import com.example.order.view.HorizontalMarginItemDecoration
 import islom.din.dodo_ilmhona_proskills.R
 import islom.din.dodo_ilmhona_proskills.databinding.LayoutDodoconitBinding
+import islom.din.dodo_ilmhona_proskills.view.adapter.CoinAdapter
 import java.lang.Math.abs
 
 class DodoCoinFragment: Fragment() {
@@ -30,6 +33,14 @@ class DodoCoinFragment: Fragment() {
         viewPager2 =binding.viewPager2
         viewPager2.adapter=adapter
         adapter.submitList(GetPizzaList().getList())
+        adapter.onClick={
+            val action =DodoCoinFragmentDirections.actionDodoCoinFragment2ToOrderCointFragement()
+            findNavController().navigate(action)
+        }
+
+
+
+
         // You need to retain one page on each side so that the next and previous items are visible
         viewPager2.offscreenPageLimit = 1
 

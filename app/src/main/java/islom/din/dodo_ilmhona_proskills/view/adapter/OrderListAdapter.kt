@@ -3,12 +3,12 @@ package islom.din.dodo_ilmhona_proskills.view.profil
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.order.Pizza
 import islom.din.dodo_ilmhona_proskills.R
 import islom.din.dodo_ilmhona_proskills.databinding.ItemHistoryOrderBinding
+import islom.din.dodo_ilmhona_proskills.view.adapter.OrderDiffUnits
 
 
 class OrderListAdapter:ListAdapter<Pizza,OrderListAdapter.OrderViewHolder>(OrderDiffUnits()) {
@@ -38,9 +38,4 @@ class OrderListAdapter:ListAdapter<Pizza,OrderListAdapter.OrderViewHolder>(Order
     override fun onBindViewHolder(holder: OrderViewHolder, position: Int) {
        holder.bind(getItem(position))
     }
-}
-class OrderDiffUnits:DiffUtil.ItemCallback<Pizza>() {
-    override fun areItemsTheSame(oldItem: Pizza, newItem: Pizza) = oldItem.id == newItem.id
-
-    override fun areContentsTheSame(oldItem: Pizza, newItem: Pizza) = oldItem == newItem
 }

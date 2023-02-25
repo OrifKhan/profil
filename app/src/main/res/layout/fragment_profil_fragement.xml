@@ -7,39 +7,48 @@
 
        >
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <ImageView
+        android:id="@+id/setting_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/outline_info_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/coint"
-                android:layout_width="130dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="#ACA3A3"
-                app:cardCornerRadius="20dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_icon">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="110dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="#ACA3A3"
-                app:cardCornerRadius="20dp" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/coint"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ACA3A3"
+            app:cardCornerRadius="20dp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="110dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="#ACA3A3"
-                app:cardCornerRadius="20dp" />
-        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ACA3A3"
+            app:cardCornerRadius="20dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ACA3A3"
+            app:cardCornerRadius="20dp" />
+    </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -52,7 +61,8 @@
                 android:id="@+id/recyclerItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"/>
+                android:orientation="vertical"
+                tools:listitem="@layout/item_history_order"/>
 
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
