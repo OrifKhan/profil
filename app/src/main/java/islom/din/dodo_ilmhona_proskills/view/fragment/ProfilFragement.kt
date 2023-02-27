@@ -36,8 +36,8 @@ class ProfilFragement : Fragment() {
             findNavController().navigate(acion)
             Toast.makeText(requireContext(), "run", Toast.LENGTH_LONG).show()
         }
-        binding.settingIcon.setOnClickListener{
-            val action=ProfilFragementDirections.actionProfilFragement2ToSettingFragment()
+        binding.settingIcon.setOnClickListener {
+            val action = ProfilFragementDirections.actionProfilFragement2ToSettingFragment()
             findNavController().navigate(action)
         }
 
